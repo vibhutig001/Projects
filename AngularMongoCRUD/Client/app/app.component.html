@@ -1,0 +1,27 @@
+<h1 id="h1">Angular + Node.js + Express.js + MongoDB Application</h1>
+<section>
+    <div class="example-button-row" style="text-align: center;">
+
+        <button mat-raised-button color="accent" (click)="fetchData()">want to ReadData</button>
+
+        <button mat-raised-button color="accent" (click)="insertData()">want to InsertData</button>
+
+        <button mat-raised-button color="accent" (click)="DeleteData()">want to DeleteData</button>
+
+        <button mat-raised-button color="accent" (click)="UpdateData()">want to UpdateData</button>
+    </div>
+
+
+    <div *ngIf="buttonClicked && batches.length > 0">
+        <h2>Batches</h2>
+        <ul>
+            <li *ngFor="let batch of batches">{{ batch | json }}</li>
+        </ul>
+    </div>
+
+</section>
+
+
+
+
+<router-outlet></router-outlet>
